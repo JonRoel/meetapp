@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/meetapp/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/meetapp/static/js/main.1d60ae11.chunk.js",
+    "main.js.map": "/meetapp/static/js/main.1d60ae11.chunk.js.map",
+    "runtime-main.js": "/meetapp/static/js/runtime-main.cc358ef7.js",
+    "runtime-main.js.map": "/meetapp/static/js/runtime-main.cc358ef7.js.map",
+    "static/js/2.7e748ff8.chunk.js": "/meetapp/static/js/2.7e748ff8.chunk.js",
+    "static/js/2.7e748ff8.chunk.js.map": "/meetapp/static/js/2.7e748ff8.chunk.js.map",
+    "static/js/3.43a4a24a.chunk.js": "/meetapp/static/js/3.43a4a24a.chunk.js",
+    "static/js/3.43a4a24a.chunk.js.map": "/meetapp/static/js/3.43a4a24a.chunk.js.map",
+    "index.html": "/meetapp/index.html",
+    "service-worker.js": "/meetapp/service-worker.js",
+    "service-worker.js.map": "/meetapp/service-worker.js.map",
+    "static/css/main.9d5b29c0.chunk.css.map": "/meetapp/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.7e748ff8.chunk.js.LICENSE.txt": "/meetapp/static/js/2.7e748ff8.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/meetapp/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc358ef7.js",
+    "static/js/2.7e748ff8.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.1d60ae11.chunk.js"
+  ]
+}
