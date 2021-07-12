@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { mockData } from './mockData';
+import { extractLocations } from './api';
 
 
 class CitySearch extends Component {

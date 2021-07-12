@@ -16,9 +16,7 @@ class NumberOfEvents extends Component {
   render() { 
     return (
       <div className="CitySearch">
-        
-        <input type="text" id="citySearch" className="numberInput" value={this.state.query} onChange={this.handleInputChanged} />
-
+        <input type="text" id="numberInput" className="numberInput" value={this.state.query} onChange={this.handleInputChanged} />
       </div>
     );
   }
