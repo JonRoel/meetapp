@@ -38,12 +38,13 @@ class App extends Component {
   }
 
   render() {
+    const { locations, events } = this.state;
     return (
       <div className="App">
         <h1>This meetup app should render</h1>
-          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents />
-        <EventList events={this.state.events} />
+        <EventList events={events} />
       </div>
     );
   }

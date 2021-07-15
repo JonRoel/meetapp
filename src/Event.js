@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { mockData } from './mockData';
-import PropType from 'prop-types';
+
 
 
 class Event extends Component {
@@ -23,6 +22,7 @@ class Event extends Component {
 
   render() {
     var { btnText } = this.props;
+    //const { summary, location, start, htmlLink, description } = this.props.events;
 		const { opened } = this.state;
 
 		if (opened){
@@ -33,7 +33,7 @@ class Event extends Component {
     return (
       <Card>
         <Card.Body>
-          <Card.Title>Event Title: {mockData.summary}</Card.Title>
+          <Card.Title>Event Title: </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">Event Location</Card.Subtitle>
           <Card.Text>Event date and Time</Card.Text>
           <div className="ToggleButtonWrapper">
