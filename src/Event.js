@@ -1,27 +1,49 @@
 import React, { Component } from 'react';
-import { Collapse, Button, Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+import { mockData } from './mockData';
+import PropType from 'prop-types';
+
 
 class Event extends Component {
-  constructor(){
-    super();
-    this.state = { 
-      showText: false
-    };
+  constructor(props) {
+		super(props);
+		this.state = {
+			opened: false,
+      mockData: '',
+		};
+		this.toggleBox = this.toggleBox.bind(this);
   }
+  
+  toggleBox() {
+		const { opened } = this.state;
+		this.setState({
+			opened: !opened,
+		});
+	}
 
   render() {
+    var { btnText } = this.props;
+		const { opened } = this.state;
+
+		if (opened){
+			btnText ='Hide Details';
+		}else{
+			btnText ='View Details';
+		}
     return (
       <Card>
         <Card.Body>
-          <Card.Title>Event Title</Card.Title>
+          <Card.Title>Event Title: {mockData.summary}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">Event Location</Card.Subtitle>
           <Card.Text>Event date and Time</Card.Text>
-          <Button variant="link" className="displayMore">Show Details</Button>
-          <Collapse className="extraDetails" in={this.state.showText}>
-            <div>
-              <Card.Text>Event Description</Card.Text>
-            </div>
-          </Collapse>
+          <div className="ToggleButtonWrapper">
+          <Button variant="link" className="ToggleButton" onClick={this.toggleBox}>{btnText}</Button>
+          </div>
+          {opened && (					
+            <Card.Text className="extraDetails">
+              This is the text that should show
+            </Card.Text>
+            )}
           </Card.Body>
       </Card>
     );

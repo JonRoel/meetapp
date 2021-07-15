@@ -11,24 +11,19 @@ describe('<Event /> component', () => {
   });
 
   test('render toggle button', () => {
-    expect(EventWrapper.find('.displayMore')).toHaveLength(1);
+    expect(EventWrapper.find('.ToggleButton')).toHaveLength(1);
   });
 
-  test('render correct state for show/hide button', () => {
+  test('render correct state for show/hide button when clicked', () => {
     EventWrapper.setState({
-      showText: true  });
-    EventWrapper.find('.displayMore').at(0).simulate('click');
-    expect(EventWrapper.state("showText")).toBe(true);
+      showText: false  });
+    EventWrapper.find('.ToggleButton').at(0).simulate('click');
+    expect(EventWrapper.state("opened")).toBe(true);
   })
 
-  // Passes - This renders without the need for the toggle -- Should reserver rendering until click to speed up app.
-  // test('render correct state for show/hide button', () => {
-  //     expect(EventWrapper.find('.extraDetails')).toHaveLength(1);
-  //   })
-
   // Passed the test when rendered!
-  // test('render correct state for show/hide button', () => {
-  //   expect(EventWrapper.state("showText")).toBe(false);
-  // })
+  test('render correct state for show/hide button', () => {
+    expect(EventWrapper.state("showText")).toBe(false);
+  })
 
 });
