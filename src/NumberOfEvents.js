@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class NumberOfEvents extends Component {
   
   state = {
@@ -11,7 +12,7 @@ class NumberOfEvents extends Component {
     this.setState({ 
       numberOfEvents: number,
     });
-    this.props.updateEventCount(number);
+    this.props.updateEventCount(event.target.value);
   };
 
   render() {
@@ -22,5 +23,6 @@ class NumberOfEvents extends Component {
     );
   }
 }
+
 
 export default NumberOfEvents;

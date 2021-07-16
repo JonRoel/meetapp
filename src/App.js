@@ -47,7 +47,7 @@ class App extends Component {
     this.setState({
       numberOfEvents: eventCount
     });
-    this.updateEvents(currentLocation);
+    this.updateEvents(currentLocation, eventCount);
   }
 
   render() {
