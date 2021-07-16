@@ -6,11 +6,14 @@ import NumberOfEvents from './NumberOfEvents';
 import 'bootstrap/dist/css/bootstrap.css';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
+import logo from './logo.png';
 
 class App extends Component {
   state = {
     events: [],
-    locations: []
+    currentLocation: "all",
+    locations: [],
+    numberOfEvents: 12,
   }
 
   componentDidMount() {
@@ -29,21 +32,31 @@ class App extends Component {
   updateEvents = (location) => {
     getEvents().then((events) => {
       const locationEvents = (location === 'all') ?
-      events :
-      events.filter((event) => event.location === location);
+        events :
+        events.filter((event) => event.location === location);
+      const { numberOfEvents } = this.state;
       this.setState({
-        events: locationEvents
+        events: locationEvents.slice(0, numberOfEvents)
       });
     });
   }
 
+  updateEventCount = (eventCount) => {
+    const { currentLocation } = this.state;
+    this.setState({
+      numberOfEvents: eventCount
+    });
+    this.updateEvents(currentLocation);
+  }
+
   render() {
-    const { locations, events } = this.state;
+    const { locations, events, numberOfEvents } = this.state;
     return (
       <div className="App">
-        <h1>This meetup app should render</h1>
+        <img height="60px" src={logo} alt="Logo" />
+        <h4>Your source for local events</h4>
           <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents />
+        <NumberOfEvents numberOfEvents={numberOfEvents} updateEventCount={this.updateEventCount} />
         <EventList events={events} />
       </div>
     );
