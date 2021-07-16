@@ -3,6 +3,7 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
@@ -52,13 +53,27 @@ class App extends Component {
   render() {
     const { locations, events, numberOfEvents } = this.state;
     return (
-      <div className="App">
+      <Container className="App">
+      <Row className="text-white">
+        <Col md={12}>
         <img height="60px" src={logo} alt="Logo" />
         <h4>Your source for local events</h4>
-          <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents numberOfEvents={numberOfEvents} updateEventCount={this.updateEventCount} />
-        <EventList events={events} />
-      </div>
+        </Col>
+        </Row>
+        <Row>
+          <Col className="CitySearchWrapper" md={6}>
+            <CitySearch locations={locations} updateEvents={this.updateEvents} />
+          </Col>
+          <Col className="NumberInputWrapper" md={6}>
+            <NumberOfEvents numberOfEvents={numberOfEvents} updateEventCount={this.updateEventCount} />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12}>
+            <EventList events={events} />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
