@@ -44,7 +44,7 @@ class Event extends Component {
           <Button variant="link" className="ToggleButton" onClick={this.toggleBox}>{btnText}</Button>
           </div>
           {opened && (					
-            <Card.Text className="extraDetails">
+            <Card.Text className="eventDetails">
               {event.description}
             </Card.Text>
             )}

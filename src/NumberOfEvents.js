@@ -18,7 +18,7 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div>
-        <p>Input number of events </p><input type="number" id="numberInput" value={this.state.numberOfEvents} className="numberInput" onChange={(e) => this.handleInputChanged(e)} />
+        <p>Limit search results </p><input type="number" id="numberInput" value={this.state.numberOfEvents} className="numberInput" onChange={(e) => this.handleInputChanged(e)} />
       </div>
     );
   }
