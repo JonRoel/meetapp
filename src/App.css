@@ -31,6 +31,11 @@ ul {
   text-align: right;
 }
 
+.ToggleButton, .btn, .btn-link, :focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 p {
   margin: 5px 0;
 }
