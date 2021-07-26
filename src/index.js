@@ -14,7 +14,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorkerRegistration.unregister();
+serviceWorkerRegistration.register();
 reportWebVitals();
 
 atatus.config('3c7bfb6934964c28a852f9fa1dd99930').install();
