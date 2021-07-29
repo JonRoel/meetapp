@@ -3,6 +3,43 @@
 This is a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. 
 The application uses the Google Calendar API to fetch upcoming events.
 
+<h3>Scope</h3>
+This application pulls an event list from Google Calendars API. The events are filterable by city, visual data updates in 2 different charts, and allows you to set number of displayed events. The application is also a Progressive Web Application (PWA) allowing you to install it through a browser onto your device. 
+
+The intended scope of this project was to learn various testing models. I started with Unit Testing, then Integration testing and finalized the functionality with User Acceptance and End-to-End Testing with Atatus.
+
+<h3>Technologies Used</h3>
+React
+Google Calendar API
+
+<h3>Dependencies</h3>
+"@testing-library/jest-dom": "^5.14.1",
+    testing-library/react
+    testing-library/user-event
+    atatus-spa
+    axios
+    bootstrap
+    moment
+    nprogress
+    react
+    react-bootstrap
+    react-dom
+    react-scripts
+    recharts
+    web-vitals
+    workbox-background-sync
+    workbox-broadcast-update
+    workbox-cacheable-response
+    workbox-core
+    workbox-expiration
+    workbox-google-analytics
+    workbox-navigation-preload
+    workbox-precaching
+    workbox-range-requests
+    workbox-routing
+    workbox-strategies
+    workbox-streams
+
 <h2>Project Brief</h2>
 
 User Stories for each feature and sceneries for each feature.
