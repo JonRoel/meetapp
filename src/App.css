@@ -94,7 +94,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 78px;
+  top: 70px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -120,6 +120,14 @@ input[type="number"] {
 }
 .NumberInputWrapper p {
   color:#fff;
+}
+
+.networkNotification {
+  text-align: left;
+  padding:15px;
+  border: 2px solid #f8a01f;
+  background-color:rgba(248, 160, 31, 0.05);
+  border-radius: 5px;
 }
 
 .event {
@@ -239,6 +247,18 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
+.InfoAlert {
+  margin: 0px 10px;
+  background-color:#fff;
+}
+
+/* Chart Wrapper */
+.chartWrapper {
+  background-color:#fff;
+  max-width:97%;
+  border-radius:5px;
+  margin:10px auto;
+}
 
 
 @media only screen and (min-width: 992px) {

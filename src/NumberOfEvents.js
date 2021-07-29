@@ -16,11 +16,11 @@ class NumberOfEvents extends Component {
         numberOfEvents:''
       });
     } else {
-    this.setState({ 
-      numberOfEvents: number,
-      errorText: '',
-    });
-    this.props.updateEventCount(event.target.value);
+      this.setState({ 
+        numberOfEvents: number,
+        errorText: '',
+      });
+      this.props.updateEventCount(event.target.value);
     }
   };
 
@@ -35,6 +35,5 @@ class NumberOfEvents extends Component {
     );
   }
 }
-
 
 export default NumberOfEvents;

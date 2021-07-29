@@ -8,7 +8,7 @@ export const extractLocations = (events) => {
   return locations;
 };
 
-const checkToken = async (accessToken) => {
+export const checkToken = async (accessToken) => {
   const result = await fetch(
     `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
   )
@@ -50,6 +50,13 @@ export const getEvents = async () => {
     NProgress.done();
     return mockData;
   }
+
+  if (!navigator.onLine) {
+    const events = localStorage.getItem("lastEvents");
+    NProgress.done();
+    console.log(events);
+    return events ? JSON.parse(events).events : [];
+  };
 
   const token = await getAccessToken();
 

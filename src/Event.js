@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import { Button, Card } from 'react-bootstrap';
 import { mockData } from './mockData';
-import moment from 'moment';
-
 
 class Event extends Component {
   constructor(props) {
@@ -29,9 +28,9 @@ class Event extends Component {
 		const { opened } = this.state;
     const eventStart = moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a');
 
-		if (opened){
+		if (opened) {
 			btnText ='Hide Details';
-		}else{
+		} else {
 			btnText ='View Details';
 		}
     return (
@@ -41,14 +40,14 @@ class Event extends Component {
           <Card.Subtitle className="mb-2 text-muted">{`${eventStart}`}</Card.Subtitle>
           <Card.Text>{event.location}</Card.Text>
           <div className="ToggleButtonWrapper">
-          <Button variant="link" className="ToggleButton" onClick={this.toggleBox}>{btnText}</Button>
+            <Button variant="link" className="ToggleButton" onClick={this.toggleBox}>{btnText}</Button>
           </div>
           {opened && (					
             <Card.Text className="eventDetails">
               {event.description}
             </Card.Text>
             )}
-          </Card.Body>
+        </Card.Body>
       </Card>
     );
   }

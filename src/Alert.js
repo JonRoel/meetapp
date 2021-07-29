@@ -5,6 +5,7 @@ class Alert extends Component {
     super(props);
       this.color = null;
     }
+
     getStyle = () => {
       return {
         color: this.color,
@@ -20,13 +21,22 @@ class Alert extends Component {
     }
 }
 
+//Alert for no city match
 class InfoAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'goldenrod';
   }
+  getStyle = () => {
+    return {
+      color: this.color,
+      background: '#fff',
+      margin: '0px 10px',
+    };
+  }
 }
 
+//Alert for incorrect number input
 class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
@@ -34,4 +44,12 @@ class ErrorAlert extends Alert {
   }
 }
 
-export { InfoAlert, ErrorAlert };
+//Alert for no network connection
+class NetworkAlert extends Alert {
+  constructor(props) {
+    super(props);
+    this.color = '#f8a01f';
+  }
+}
+
+export { InfoAlert, ErrorAlert, NetworkAlert };
