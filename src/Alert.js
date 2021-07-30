@@ -31,7 +31,8 @@ class InfoAlert extends Alert {
     return {
       color: this.color,
       background: '#fff',
-      margin: '0px 10px',
+      margin: '0px',
+      padding: '0px 10px',
     };
   }
 }
