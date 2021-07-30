@@ -3,9 +3,48 @@
 This is a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. 
 The application uses the Google Calendar API to fetch upcoming events.
 
+<h3>Scope</h3>
+<p>This application pulls an event list from Google Calendars API. The events are filterable by city, visual data updates in 2 different charts, and allows you to set number of displayed events. The application is also a Progressive Web Application (PWA) allowing you to install it through a browser onto your device.</p> 
+
+<p>The intended scope of this project was to learn various testing models. I started with Unit Testing, then Integration testing and finalized the functionality with User Acceptance and End-to-End Testing with Atatus.</p>
+
+<h3>Technologies Used</h3>
+React
+Google Calendar API
+
+<h3>Dependencies</h3>
+    <ul>
+    <li>testing-library/jest-dom</li>
+    <li>testing-library/react</li>
+    <li>testing-library/user-event</li>
+    <li>atatus-spa</li>
+    <li>axios</li>
+    <li>bootstrap</li>
+    <li>moment</li>
+    <li>nprogress</li>
+    <li>react</li>
+    <li>react-bootstrap</li>
+    <li>react-dom</li>
+    <li>react-scripts</li>
+    <li>recharts</li>
+    <li>web-vitals</li>
+    <li>workbox-background-sync</li>
+    <li>workbox-broadcast-update</li>
+    <li>workbox-cacheable-response</li>
+    <li>workbox-core</li>
+    <li>workbox-expiration</li>
+    <li>workbox-google-analytics</li>
+    <li>workbox-navigation-preload</li>
+    <li>workbox-precaching</li>
+    <li>workbox-range-requests</li>
+    <li>workbox-routing</li>
+    <li>workbox-strategies</li>
+    <li>workbox-streams</li>
+    </ul>
+
 <h2>Project Brief</h2>
 
-User Stories for each feature and sceneries for each feature.
+<p>User Stories for each feature and sceneries for each feature.<p>
 
 <h3>1. Filter events by city</h3>
 
